@@ -1,0 +1,114 @@
+\input{Passport}
+
+\def\paragraphindent{12.5mm}    % Отступ в первой строке абзаца (по горизонтали)
+\def\paragraphskip{2mm}         % Отступ между абзацами (по вертикали)
+\def\parleftskip{0mm}
+\def\parrightskip{5mm}
+
+\usepackage{DejaVuSansCondensed} % шрифты документа - DejaVuSansCondensed
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{cmap} % Таблицы кодировок. Корректная работа с кириллицей (поиск, копирование)
+\usepackage[T1,T2A]{fontenc} % кодовая страница
+\usepackage[utf8]{inputenc} % кодировка входного файла
+
+\usepackage[english,russian]{babel}
+
+\usepackage[linktocpage=true]{hyperref} % Чтобы работали ссылки, pdf metadata
+\hypersetup{pdfauthor   = \PDFAuthor,
+            pdftitle    = \PdfTitle,
+            pdfsubject  = \DocName,
+            pdfkeywords = {},
+            pdfproducer = {},
+            pdfcreator  = {},
+            bookmarks=true, % add bookmarks to index
+            bookmarksopen=true, % defaults to having the bookmarks open
+            unicode = true,  % проверить зечем это надо
+            colorlinks = true, % Включаем цвета у ссылок (false - включается цвет рамки)
+            urlcolor = blue,      % ссылки на WEB сайты
+            linkcolor = black,    % внутренние ссылки
+            filecolor = yellow,   % ссылки на файлы
+            linkbordercolor = {1 0 0},    % цвет рамки
+            pdfnewwindow = true, % открывать в новом окне
+            pdfborderstyle = {/S/U/W 1}}
+
+
+\usepackage{hyphenat}
+\hyphenpenalty=9000 % чем выше значение (до 10000), тем меньше переносов, default=50
+\uchyph=1 % не переносить слова с большой буквы (не будут переноситься имена собственные), default=1
+\tolerance=10000 % точность выравнивания правого края
+
+\usepackage{calc}
+
+\usepackage{setspace}
+\singlespacing     % 1
+%\onehalfspacing    % 1.5
+%\setstretch{1.25}  % 1.5
+%\doublespacing      % 2
+%\linespread{1.25}
+
+\setlength{\parindent}{\paragraphindent} % абзацный отступ
+\setlength{\parskip}{\paragraphskip} % между абзацами
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\DeclareGraphicsExtensions{.eps,.pdf,.png}
+
+\usepackage{enumitem}
+\setlist{nosep,
+         leftmargin=\parleftskip,
+         rightmargin=\parrightskip,
+         itemindent=\paragraphindent+5mm,
+         labelwidth=3mm,
+         labelsep=2mm}
+
+
+\usepackage{titlesec}
+
+\titleformat
+{\section} % command
+[block]% shape
+{\centering\bfseries\large} % format
+{\hspace{\paragraphindent}\thesection\ } % label
+{0pt} % sep
+{} % before-code
+[] % after-code
+\titlespacing{\section}{\leftskip}{0em}{2em}[\rightskip]
+
+\newcommand{\usection}[1]{\section*{#1}                     % Section  без нумерации
+\addcontentsline{toc}{section}{\protect\numberline{}#1}}
+
+
+\titleformat
+{\subsection} % command
+[block]% shape
+{\centering\bfseries} % format
+{\hspace{\paragraphindent}\thesubsection\ } % label
+{0pt} % sep
+{} % before-code
+[] % after-code
+\titlespacing{\subsection}{\leftskip}{2em}{2em}[\rightskip]
+
+\titleformat
+{\subsubsection} % command
+[block]% shape
+{\bfseries} % format
+{\hspace{\paragraphindent}\thesubsubsection\ } % label
+{0pt} % sep
+{} % before-code
+[] % after-code
+\titlespacing{\subsubsection}{\leftskip}{*0}{*0}[\rightskip]
+
+
+
+\usepackage{utfsym}     % Символы Юникод
+\usepackage{xcolor}     % Управление цветом
+
+
+
+% СТИЛЬ ВЫДЕЛЕНИЯ
+
+\newcommand{\hlight}[2][black]{{\bfseries\color{#1}{#2}}}
+
+
+

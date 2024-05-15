@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{DejaVuSansCondensed} % шрифты документа - DejaVuSansCondensed
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{graphicx}
+%\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage{cmap} % Таблицы кодировок. Корректная работа с кириллицей (поиск, копирование)
+\usepackage[T1,T2A]{fontenc} % кодовая страница
+\usepackage[utf8]{inputenc} % кодировка входного файла
+\usepackage[english,russian]{babel}
+\usepackage[linktocpage=true]{hyperref} % Чтобы работали ссылки, pdf metadata
+\usepackage{hyphenat}
+\hyphenpenalty=9000 % чем выше значение (до 10000), тем меньше переносов, default=50
+\uchyph=1 % не переносить слова с большой буквы (не будут переноситься имена собственные), default=1
+\tolerance=5000 % точность выравнивания правого края
+\usepackage{setspace}
+%\singlespacing     % 1
+\onehalfspacing    % 1.5
+%\setstretch{1.25}  % 1.5
+%\doublespacing      % 2
+%\linespread{1.25}
+\def\paragraphindent{12.5mm}
+\setlength{\parindent}{\paragraphindent} % абзацный отступ
+\setlength{\parskip}{2mm} % между абзацами
+\graphicspath{ {images/} }
+\title{Тепловые явления}
+\date{}
+\author{}
+\begin{document}
+\section*{\centering{Тепловые явлеfasfafdния}}
+\textbf{Тепловые явления}
+— явления, связанные с изменением температуры или агрегатного состояния в-ва. 
+\textit{(кипение в чайнике, кристаллизация в морозильнике, конденсация)} 
+\subsection*{\centering{Тепловое движение}}
+  \textbf{Тепловое движение} — хаотичное движение молекул, связанное с температурой.\par
+Сопоставление некоторых температур, связанных с ними мест/явлений:
+\begin{itemize}
+\item \(0\) °C — температура плавления льда
+\item \(20\)°C — средняя температура на земле
+\item \(58\) °C — максимальная температура на земле
+\item \(-89\) °C — минимальная температура на земле
+\item \(350 — 400\) °C — Меркурий, Венера
+\item \(-250\) °С — Нептун
+\item \(5800\) °C поверхность солнца
+\item \(15*10^6 — 17*10^6\) °C в центре солнца
+\item \(200*10^6\) — получено в лаборатории
+\item \(-273,15\) °С — минимально возможная температура
+\end{itemize}
+\end{document}
